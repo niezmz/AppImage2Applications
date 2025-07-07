@@ -48,7 +48,7 @@ class AppImage2ApplicationsGUI:
         title_label.grid(row=0, column=0, columnspan=2, pady=(0, 20))
         
         # 说明
-        instruction_label = ttk.Label(main_frame, text="点击选择文件按钮来选择AppImage文件，快捷方式将自动放入应用菜单（不放入桌面）")
+        instruction_label = ttk.Label(main_frame, text="点击选择文件按钮来选择AppImage文件，快捷方式将自动放入应用菜单")
         instruction_label.grid(row=1, column=0, columnspan=2, pady=(0, 10))
         
         # 选择按钮
@@ -108,7 +108,7 @@ class AppImage2ApplicationsGUI:
         self.setup_icon_grid()
         
         # 图标说明
-        icon_note = ttk.Label(self.icon_frame, text="说明：点击上方图标选择一个作为应用图标。Linux桌面环境需要PNG格式的图标文件才能正常显示。", 
+        icon_note = ttk.Label(self.icon_frame, text="说明：点击上方图标选择一个作为应用图标。也可以在src文件夹替换上述8张预设的icon图，规格为512*512的png文件。",
                               foreground="gray", font=("Arial", 8))
         icon_note.grid(row=2, column=0, columnspan=2, pady=(5, 0), sticky=tk.W)
 
