@@ -1,7 +1,6 @@
 # AppImage2Applications 依赖文件
 
 # 基础依赖（Python标准库，通常已包含）
-# tkinter - GUI框架（通常随Python安装）
 
 # 必需依赖
 pillow>=8.0.0  # 图标预览和图像处理功能

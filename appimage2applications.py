@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 AppImage2Applications - 将AppImage文件转换为应用菜单快捷方式
 适用于Linux系统（无拖放功能，仅放入applications，预设图标选择）

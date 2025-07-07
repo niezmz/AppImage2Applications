@@ -17,7 +17,7 @@
 
 - Linux操作系统
 - Python 3.6+
-- tkinter（通常随Python一起安装）
+- tkinter（通常需要额外安装）
 - Pillow（用于图标预览）
 
 ## 安装依赖
