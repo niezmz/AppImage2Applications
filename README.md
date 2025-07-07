@@ -1,6 +1,6 @@
 # AppImage2Applications
 
-一个用于Linux系统的Python应用，可以将AppImage文件转换为应用菜单快捷方式。
+一个用于Linux系统的Python应用，可以为AppImage文件创建应用菜单快捷方式。
 
 ## 功能特性
 
