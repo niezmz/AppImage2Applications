@@ -50,7 +50,7 @@ pip install pillow
 
 ### 运行应用
 ```bash
-python3 appimage2applications.py
+python3 main.py
 ```
 
 ## 使用步骤
@@ -62,12 +62,49 @@ python3 appimage2applications.py
 5. **修复权限**（可选） - 如果AppImage没有执行权限，点击"修复执行权限"按钮
 6. **创建快捷方式** - 点击"创建应用菜单快捷方式"按钮，应用会在应用菜单创建.desktop文件
 
-## 文件说明
+## 项目结构
 
-- `appimage2applications.py` - 主程序文件，支持图标选择和预览
-- `src/` - 预设图标文件夹，包含8个PNG格式的图标文件
-- `requirements.txt` - 项目依赖文件
-- `README.md` - 项目说明文档
+```
+Appimage2desktop/
+├── main.py                 # 主入口文件
+├── gui.py                  # GUI界面模块
+├── file_utils.py           # 文件处理工具模块
+├── desktop_utils.py        # 桌面文件处理模块
+├── constants.py            # 常量定义文件
+├── src/                    # 预设图标文件夹
+│   ├── 1.png
+│   ├── 2.png
+│   └── ...
+├── requirements.txt        # 项目依赖文件
+└── README.md              # 项目说明文档
+```
+
+## 模块说明
+
+### main.py
+- 程序主入口点
+- 依赖项检查
+- 应用程序启动逻辑
+
+### gui.py
+- GUI界面实现
+- 用户交互处理
+- 界面布局管理
+
+### file_utils.py
+- 文件信息获取
+- 权限检查和修复
+- 应用名称提取
+
+### desktop_utils.py
+- 桌面文件创建
+- 图标设置和管理
+- 应用程序菜单刷新
+
+### constants.py
+- 应用程序常量
+- 配置参数
+- 状态消息定义
 
 ## 功能详解
 
@@ -147,6 +184,7 @@ python3 appimage2applications.py
 - **GUI框架：** tkinter
 - **图像处理：** Pillow (PIL)
 - **目标平台：** Linux
+- **架构：** 模块化设计
 - **许可证：** MIT
 
 ## 清理快捷方式
