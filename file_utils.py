@@ -7,7 +7,7 @@ import stat
 import re
 from constants import STATUS_FILE_SELECTED
 
-
+# 格式化文件大小显示
 def format_size(size_bytes):
     """格式化文件大小显示"""
     for unit in ['B', 'KB', 'MB', 'GB']:
@@ -16,7 +16,7 @@ def format_size(size_bytes):
         size_bytes /= 1024.0
     return f"{size_bytes:.1f} TB"
 
-
+# 获取文件信息
 def get_file_info(file_path):
     """获取文件信息"""
     try:
@@ -34,7 +34,7 @@ def get_file_info(file_path):
     except Exception as e:
         raise Exception(f"无法读取文件信息: {str(e)}")
 
-
+# 修复文件执行权限
 def fix_execution_permission(file_path):
     """修复文件执行权限"""
     try:
@@ -45,7 +45,7 @@ def fix_execution_permission(file_path):
     except Exception as e:
         raise Exception(f"无法修复执行权限: {str(e)}")
 
-
+# 从AppImage文件名提取应用名称
 def get_app_name(appimage_path):
     """从AppImage文件名提取应用名称"""
     filename = os.path.basename(appimage_path)
@@ -59,7 +59,7 @@ def get_app_name(appimage_path):
     name = re.sub(r'[_-]v[0-9]+(\.[0-9]+)*', '', name)
     return name
 
-
+# 验证AppImage文件
 def validate_appimage_file(file_path):
     """验证AppImage文件"""
     if not os.path.exists(file_path):

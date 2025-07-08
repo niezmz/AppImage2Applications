@@ -17,6 +17,7 @@ from desktop_utils import create_app_shortcut, get_icon_paths
 
 
 class AppImage2ApplicationsGUI:
+    # 初始化
     def __init__(self):
         self.root = tk.Tk()
         self.root.title(APP_TITLE)
@@ -35,6 +36,7 @@ class AppImage2ApplicationsGUI:
         
         self.setup_ui()
 
+    # 生成界面
     def setup_ui(self):
         """设置用户界面"""
         main_frame = ttk.Frame(self.root, padding="10")
@@ -70,6 +72,7 @@ class AppImage2ApplicationsGUI:
         # 状态栏
         self.setup_status_bar(main_frame)
 
+    # 读取所选择的appimage文件的信息
     def setup_file_info_frame(self, parent):
         """设置文件信息框架"""
         self.file_info_frame = ttk.LabelFrame(parent, text="文件信息", padding="5")
@@ -89,6 +92,7 @@ class AppImage2ApplicationsGUI:
         ttk.Label(self.file_info_frame, text="执行权限:").grid(row=2, column=0, sticky=tk.W)
         ttk.Label(self.file_info_frame, textvariable=self.file_permission_var).grid(row=2, column=1, sticky=(tk.W, tk.E))
 
+    # 显示预设的图片
     def setup_icon_frame(self, parent):
         """设置图标选择框架"""
         self.icon_frame = ttk.LabelFrame(parent, text="图标设置", padding="5")

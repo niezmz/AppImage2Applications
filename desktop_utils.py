@@ -7,7 +7,7 @@ import shutil
 import subprocess
 from file_utils import get_app_name
 
-
+# 创建桌面文件
 def create_desktop_file(desktop_path, appimage_path, app_name, icon_name):
     """创建桌面文件"""
     if icon_name:
@@ -30,6 +30,7 @@ StartupWMClass={app_name}
         f.write(desktop_content)
 
 
+# 设置图标
 def setup_icon(app_name, selected_icon_path):
     """
     设置图标：如果用户选择了图标，复制到~/.local/share/icons并返回图标名
@@ -57,6 +58,7 @@ def setup_icon(app_name, selected_icon_path):
         raise Exception(f"设置图标失败: {str(e)}")
 
 
+# 刷新应用程序菜单
 def refresh_applications_menu():
     """刷新应用程序菜单"""
     try:
@@ -73,6 +75,7 @@ def refresh_applications_menu():
         pass
 
 
+# 创建应用程序快捷方式
 def create_app_shortcut(appimage_path, selected_icon_path=None):
     """创建应用程序快捷方式"""
     try:
@@ -114,6 +117,7 @@ def create_app_shortcut(appimage_path, selected_icon_path=None):
         }
 
 
+# 获取图标文件路径列表
 def get_icon_paths():
     """获取图标文件路径列表"""
     icon_paths = []
